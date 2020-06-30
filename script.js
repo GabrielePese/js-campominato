@@ -13,7 +13,6 @@ function numeroRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 // I numeri non possono essere duplicati
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 
@@ -25,22 +24,22 @@ console.log(numeroUtente);
 
 
 for (var i = 0; i < numeriComputer.length; i++) {
-  var check = checkNumero (numeroUtente, numeriComputer[i])
+  var check = checkNumero (numeroUtente, numeriComputer)
 
 }
 
-
+console.log(check);
 
 function checkNumero (numeroInserito, array){
-  for (var i = 0; i < numeriComputer.length; i++) {
-    if (numeroInserito == numeriComputer[i]) {
+  for (var i = 0; i < array.length; i++) {
+    if (numeroInserito == array[i]) {
     return true;
   } else {
     return false;
   }
 }
 }
-console.log(check);
+
 
 
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
