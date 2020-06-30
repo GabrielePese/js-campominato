@@ -31,9 +31,9 @@ for (var i = 0; i < numeriComputer.length; i++) {
 
 
 
-function checkNumero (numero, array){
+function checkNumero (numeroInserito, array){
   for (var i = 0; i < numeriComputer.length; i++) {
-    if (numeroUtente == numeriComputer[i]) {
+    if (numeroInserito == numeriComputer[i]) {
     return true;
   } else {
     return false;
