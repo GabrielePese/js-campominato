@@ -17,7 +17,7 @@ function numeroRandom(min, max) {
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 
 var numeroUtente = parseInt(prompt("dammi un numero da 1 a 100"));
-console.log(numeroUtente);
+// console.log(numeroUtente);
 // L’utente non può inserire più volte lo stesso numero.
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
@@ -25,18 +25,41 @@ console.log(numeroUtente);
 
 for (var i = 0; i < numeriComputer.length; i++) {
   var check = checkNumero (numeroUtente, numeriComputer)
-
 }
 
-console.log(check);
+// console.log(check);
+
+// function checkNumero (numeroInserito, array){
+//   for (var i = 0; i < array.length; i++) {
+//     if (numeroInserito == array[i]) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// }
 
 function checkNumero (numeroInserito, array){
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length && !trovato; i++) {
+    var trovato = false;
     if (numeroInserito == array[i]) {
-    return true;
-  } else {
-    return false;
+    trovato = true
+    console.log("La partita è finita");
   }
+
+  if (trovato = false) {
+    console.log("continua");
+
+  }
+
+
+
+// if (trovato = true) {
+//   console.log("ok");
+// }
+// else {
+//   console.log("NO");
+// }
 }
 }
 
