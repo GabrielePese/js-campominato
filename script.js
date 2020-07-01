@@ -7,60 +7,42 @@ for (var i = 0; i < 4; i++) {
 }
 console.log(numeriComputer)
 
-function numeroRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 // I numeri non possono essere duplicati
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 
-var numeroUtente = parseInt(prompt("dammi un numero da 1 a 100"));
-// console.log(numeroUtente);
+var numeroUtente = parseInt(prompt("dammi numero 1-100"))
+
 // L’utente non può inserire più volte lo stesso numero.
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 
-
-for (var i = 0; i < numeriComputer.length; i++) {
-  var check = checkNumero (numeroUtente, numeriComputer)
+var i=0
+while (i < numeriComputer.length && trovato = false) {
+  var check = checkNumero (numeriComputer , numeroUtente)
+   i++
 }
 
-// console.log(check);
 
-// function checkNumero (numeroInserito, array){
-//   for (var i = 0; i < array.length; i++) {
-//     if (numeroInserito == array[i]) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// }
 
-function checkNumero (numeroInserito, array){
-  for (var i = 0; i < array.length && !trovato; i++) {
-    var trovato = false;
-    if (numeroInserito == array[i]) {
+
+function checkNumero (array, numeroInserito){
+  var i= 0
+  var trovato = false
+  while (i < array.length && trovato = false) {
+    if (array[i] == numeroInserito) {
     trovato = true
-    console.log("La partita è finita");
   }
-
-  if (trovato = false) {
-    console.log("continua");
+   i++
 
   }
-
-
-
-// if (trovato = true) {
-//   console.log("ok");
-// }
-// else {
-//   console.log("NO");
-// }
+  return trovato
 }
+
+function numeroRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
